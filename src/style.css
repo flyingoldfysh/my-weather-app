@@ -6,7 +6,7 @@ body{
   text-align: center;
   margin: 40px 5px;
   font-family: sans-serif;
-  padding: 20px 30px 20px; 
+  padding: 5px 30px 5px; 
   }
   
   header:hover{
@@ -14,8 +14,15 @@ body{
   color:whitesmoke;
   border-radius: 10px;
   }
-h2{
-  font-size: 18px;
+
+.temperature {
+position: absolute;
+margin-left: 50px; 
+}
+
+ul{
+  margin-left: 120px;
+
 }
 
   li{
