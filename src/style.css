@@ -20,6 +20,13 @@ body{
 
 .headIcon{
   font-size: 50px;
+  margin-left: 75px; 
+}
+.dayNtime{
+  position: absolute;
+}
+.humNwin{
+  margin-left: 100px;
 }
   li{
     list-style-type: none;   
