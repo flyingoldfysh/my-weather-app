@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="content">
+        <div class="container">
+            <div class="search">
+                <form id="search-form">
+                    <input type="text" id="search-bar" placeholder="Type to search..." autofocus />
+                    <input class="btn btn-primary" type="submit" id="search-button" value="Enter" />
+                    <button type="button" class="btn btn-success" id="current-button">
+                        Current
+                    </button>
+                </form>
+            </div>
+            <header>
+                <h1 id="city"></h1>
+                    
+               
+                <h2 style="display: inline;" id="current-temperature"></h2>
+                <p style="display: inline;" class="units">
+                    <a href="#" id="celsius"> °C </a> |
+                    <a href="#" id="fahrenheit">°F </a>
+                </p>
+                <h3 id="weekday"></h3>
+                <li id="description"></li>
+<li> Humidity: <span id="humidity"></span>%</li>
+<li> Wind: <span id="wind"> </span> km/h </li>
+         
+                <img src="src/sun.svg" alt="sunny" width="100px" />
+            </header>
+
+            <div class="forecast">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <li class="card-title" id="day-1">Sunday + [date]</li>
+                            <li>[Temp. °C]</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <li class="card-title">Monday <small> [date] </small></li>
+                            <li>[Temp. °C]</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <li class="card-title">Tuesday<small> [date] </small></li>
+                            <li>[Temp. °C]</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <li class="card-title">Wednesday<small> [date] </small></li>
+                            <li>[Temp. °C]</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <li class="card-title">Thursday<small> [date] </small></li>
+                            <li>[Temp. °C]</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <footer>
+            Created by Winnie
+        </footer>
+    </div>
+    <script src="src/index.js"></script>
+</body>
+
+</html>
