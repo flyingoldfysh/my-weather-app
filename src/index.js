@@ -34,10 +34,7 @@ function search(event) {
   if (searchInput.value) {
     h1.innerHTML = `${searchInput.value}`;
     searchCity(searchInput.value);
-  } else {
-    h1.innerHTML = null;
-    h1.innerHTML = `Please enter a city`;
-  }
+  } 
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);

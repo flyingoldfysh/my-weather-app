@@ -9,25 +9,26 @@ body{
   padding: 5px 30px 5px; 
   color:rgb(65, 80, 80);
   }
-  
+
   header:hover{
-  border: 5px solid #D3B2D9;
   color:whitesmoke;
   border-radius: 10px;
   }
 
-.temperature {
+#search-button, #current-button{
+  display: inline-block;}
+
+.dayNtime {
 position: absolute;
 margin-right: 20px;
 }
 
 ul{
-  margin-left: 120px;
-  margin-top: -100px;
-}
+  margin-left: 100px;}
 
-i{
+.headIcon{
   font-size: 50px;
+  margin-bottom: 100px;
 }
   li{
     list-style-type: none;   
