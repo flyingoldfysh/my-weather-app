@@ -3,19 +3,28 @@ body{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
+  .content {
+    background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+    padding: 30px 100px 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 30px auto;
+  }
+
   header{
   text-align: center;
   margin: 40px 5px;
-  padding: 5px 30px; 
+  padding: 0px 30px 5px; 
   color:rgb(65, 80, 80);
   }
 
   header:hover{
   color:whitesmoke;
   }
-    li{
+  li{
     list-style-type: none;   
  }
+
 .headIcon{
   font-size: 25px;
   color:  rgb(135, 135, 135);
@@ -27,7 +36,9 @@ body{
 .humNwin{
   margin-left: 100px;
 }    
-
+.forecast{
+  margin-top: -25px;
+}
 .card{
   background-color: #cce2e9;
   margin-bottom: 5px;
@@ -48,13 +59,7 @@ body{
   top: -14px;
   }
 
-  .content {
-    background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
-    padding: 30px 100px 30px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin: 20px auto;
-  }
+
   
     footer{
   text-align: center;
