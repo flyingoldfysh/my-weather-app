@@ -9,10 +9,10 @@ body{
     border-radius: 10px;
     max-width: 600px;
     margin: 30px auto;
+    text-align: center;
   }
 
   header{
-  text-align: center;
   margin: 40px 5px;
   padding: 0px 30px 5px; 
   color:rgb(65, 80, 80);
@@ -21,6 +21,12 @@ body{
   header:hover{
   color:whitesmoke;
   }
+
+ .units{
+  position: relative;
+  top: -14px;
+  }
+
   li{
     list-style-type: none;   
  }
@@ -42,10 +48,8 @@ body{
 .card{
   background-color: #cce2e9;
   margin-bottom: 5px;
-  border-radius: 10px;
   }
   .card-body{
-  text-align: center;
   border: 1px solid #D3B2D9; 
   color: #7c7c7c;
   }
@@ -53,16 +57,8 @@ body{
   .card-body:hover{
   border: 5px solid #D3B2D9;
   }
-
-  .units{
-  position: relative;
-  top: -14px;
-  }
-
-
   
     footer{
-  text-align: center;
   font-family: monospace;
   margin-bottom: 40px;
   }
