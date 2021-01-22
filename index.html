@@ -14,42 +14,38 @@
 
 <body>
     <div class="content">
-            <div class="search">
-                <form id="search-form">
-                    <input type="text" id="search-bar" placeholder="Type to search..." autofocus />
-                    <input class="btn btn-primary" type="submit" id="search-button" value="Enter" />
-                    <button type="button" class="btn btn-success" id="current-button">
-                        Current
-                    </button>
-                </form>
-            </div>
-    <header>
+        <div class="search">
+            <form id="search-form">
+                <input type="text" id="search-bar" placeholder="Type to search..." autofocus />
+                <input class="btn btn-primary" type="submit" id="search-button" value="Enter" />
+                <button type="button" class="btn btn-success" id="current-button"> Current </button>
+            </form>
+        </div>
+
+<header>
 <h1 id="city"></h1>
-<h2 style="display: inline;" id="current-temperature"></h2>
+<span class="headIcon">
+    <i class="fas fa-cloud-sun"> </i></span>
+    <h2 style="display: inline;" id="current-temperature">  </h2>
     <p style="display: inline;" class="units">
-    <a href="#" id="celsius"> °C </a> | <a href="#" id="fahrenheit">°F </a>
-    </p>          
-<div class ="dayNtime">
+        <a href="#" id="celsius"> °C </a> | <a href="#" id="fahrenheit">°F </a>
+    </p>
     <ul> 
+        <div class="dayNtime">
     <li id="weekday"></li>
     <li id="description"></li>
+    </div>
+ <div class="humNwin">
+     <li> Humidity: <span id="humidity"></span>%</li>
+     <li> Wind: <span id="wind"> </span> km/h </li>
     </ul>
-                </div>
- <span class="headIcon">
-<i class="fas fa-cloud-sun"></i>
-</span>
-                <ul class="humNwin">
-                <li> Humidity: <span id="humidity"></span>%</li>
-                <li> Wind: <span id="wind"> </span> km/h </li>
-                 </ul>
-                </header>
-
-            <div class="forecast">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <li class="card-title" id="day-1"> Sunday + [date]</li>
-                            <li>[Temp. °C]</li>
+</header>
+<div class="forecast">
+    <div class="col">
+    <div class="card">
+    <div class="card-body">
+         <li class="card-title" id="day-1"> Sunday + [date]</li>
+        <li>[Temp. °C]</li>
                         </div>
                     </div>
                 </div>

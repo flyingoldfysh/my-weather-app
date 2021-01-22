@@ -1,41 +1,37 @@
 body{
   background-color: #eeeeeeea;
-  font-family: sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   header{
   text-align: center;
   margin: 40px 5px;
-  padding: 5px 30px 5px; 
+  padding: 5px 30px; 
   color:rgb(65, 80, 80);
   }
 
   header:hover{
   color:whitesmoke;
-  border-radius: 10px;
   }
-
-#search-button, #current-button{
-  display: inline-block;}
-
+    li{
+    list-style-type: none;   
+ }
 .headIcon{
-  font-size: 50px;
-  margin-left: 70px; 
+  font-size: 25px;
+  color:  rgb(135, 135, 135);
 }
 .dayNtime{
   position: absolute;
+  margin-right: 70px;
 }
 .humNwin{
   margin-left: 100px;
-}
-  ul{
-    list-style-type: none;   
-    
-  }
-  .card{
-      background-color: #cce2e9;
-      margin-bottom: 5px;
-      border-radius: 10px;
+}    
+
+.card{
+  background-color: #cce2e9;
+  margin-bottom: 5px;
+  border-radius: 10px;
   }
   .card-body{
   text-align: center;
