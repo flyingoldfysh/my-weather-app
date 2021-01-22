@@ -1,11 +1,11 @@
 body{
   background-color: #eeeeeeea;
+  font-family: sans-serif;
   }
 
   header{
   text-align: center;
   margin: 40px 5px;
-  font-family: sans-serif;
   padding: 5px 30px 5px; 
   color:rgb(65, 80, 80);
   }
@@ -20,7 +20,7 @@ body{
 
 .headIcon{
   font-size: 50px;
-  margin-left: 75px; 
+  margin-left: 70px; 
 }
 .dayNtime{
   position: absolute;
@@ -28,7 +28,7 @@ body{
 .humNwin{
   margin-left: 100px;
 }
-  li{
+  ul{
     list-style-type: none;   
     
   }
