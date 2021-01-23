@@ -2,6 +2,10 @@ body{
   font-family: Arial, sans-serif;
   }
 
+  h1{
+    padding-left: 30px;
+  }
+
   ul{
     margin: 0;
     padding: 0;
@@ -13,23 +17,25 @@ body{
 
  strong{
    color:rgb(33, 33, 33);
-    font-size: 64px;
+    font-size: 55px;
     font-weight: 400;
     line-height: 1;
  }
 .overview{
-  margin: 20px -5px;
-  padding: 30px 50px 30px;
+  margin: 20px 5px 20px 0px;
+  padding: 30px 20px 30px;
   color:rgb(65, 80, 80);
   background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
   border-radius: 5px;
   }
-  
-  .content {
+  img{
+    margin-top: -30px;
+  }
+.content {
     padding-top: 15px;
   }
 
-  .content:hover{
+.content:hover{
   color:whitesmoke;
   }
 
@@ -41,4 +47,8 @@ body{
  .units{
   position: relative;
   top: -34px;
+  }
+
+  #humNwin{
+font-size: 14px;
   }
