@@ -2,18 +2,6 @@ body{
   font-family: Arial, sans-serif;
   }
 
-.overview{
-  margin: 20px -5px;
-  padding: 30px 50px 30px;
-  color:rgb(65, 80, 80);
-  background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
-  border-radius: 5px;
-  }
-
-  header:hover{
-  color:whitesmoke;
-  }
-
   ul{
     margin: 0;
     padding: 0;
@@ -22,6 +10,29 @@ body{
   li{
     list-style-type: none;   
  }
+
+ strong{
+   color:rgb(33, 33, 33);
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1;
+ }
+.overview{
+  margin: 20px -5px;
+  padding: 30px 50px 30px;
+  color:rgb(65, 80, 80);
+  background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+  border-radius: 5px;
+  }
+  
+  .content {
+    padding-top: 15px;
+  }
+
+  .content:hover{
+  color:whitesmoke;
+  }
+
 .wrapper{
   max-width: 600px;
   margin: 30px auto;
@@ -29,10 +40,5 @@ body{
 
  .units{
   position: relative;
-  top: -14px;
+  top: -34px;
   }
-
-.headIcon{
-  font-size: 25px;
-  color:  rgb(135, 135, 135);
-}
