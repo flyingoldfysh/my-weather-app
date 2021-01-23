@@ -1,68 +1,38 @@
 body{
-  background-color: #eeeeeeea;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: Arial, sans-serif;
   }
 
-  .content {
-    background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
-    padding: 30px 100px 30px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin: 30px auto;
-    text-align: center;
-  }
-
-  header{
-  margin: 40px 5px;
-  padding: 0px 30px 5px; 
+.overview{
+  margin: 20px -5px;
+  padding: 30px 50px 30px;
   color:rgb(65, 80, 80);
+  background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+  border-radius: 5px;
   }
 
   header:hover{
   color:whitesmoke;
   }
 
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+
+  li{
+    list-style-type: none;   
+ }
+.wrapper{
+  max-width: 600px;
+  margin: 30px auto;
+}
+
  .units{
   position: relative;
   top: -14px;
   }
 
-  ul{
-    margin: 0;
-    padding: 0;
-  }
-  li{
-    list-style-type: none;   
- }
-
 .headIcon{
   font-size: 25px;
   color:  rgb(135, 135, 135);
 }
-.dayNtime{
-  position: absolute;
-  margin-right: 70px;
-}
-.humNwin{
-  margin-left: 100px;
-}    
-.forecast{
-  margin-top: -25px;
-}
-.card{
-  background-color: #cce2e9;
-  margin-bottom: 5px;
-  }
-  .card-body{
-  border: 1px solid #D3B2D9; 
-  color: #7c7c7c;
-  }
-  
-  .card-body:hover{
-  border: 5px solid #D3B2D9;
-  }
-  
-    footer{
-  font-family: monospace;
-  margin-bottom: 40px;
-  }

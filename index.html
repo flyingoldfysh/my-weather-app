@@ -12,7 +12,9 @@
         <link rel="stylesheet" href="src/style.css" />
 </head>
 <body>
-    <div class="content">
+<div class="wrapper">
+<div class="overview">
+<div class="content">
         <div class="search">
             <form id="search-form">
                 <input type="text" id="search-bar" placeholder="Type to search..." autofocus />
@@ -20,71 +22,37 @@
                 <button type="button" class="btn btn-success" id="current-button"> Current </button>
             </form>
         </div>
-<header>
+
 <h1 id="city"></h1>
+<div class = "row">
+    <div class="col-6">
 <span class="headIcon">
     <i class="fas fa-cloud-sun"> </i></span>
     <h2 style="display: inline;" id="current-temperature">  </h2>
     <p style="display: inline;" class="units">
         <a href="#" id="celsius"> °C </a> | <a href="#" id="fahrenheit">°F </a>
     </p>
-    <ul> 
-        <div class="dayNtime">
+ <div class="dayNtime">
+    <ul>
     <li id="weekday"></li>
     <li id="description"></li>
-    </div>
+    </ul>
+</div>
+</div>
+</div>
+<div class="col-6">
  <div class="humNwin">
+    <ul>
      <li> Humidity: <span id="humidity"></span>%</li>
      <li> Wind: <span id="wind"> </span> km/h </li>
-    </ul>
-</header>
-<div class="forecast">
-    <div class="col">
-    <div class="card">
-    <div class="card-body">
-         <li class="card-title" id="day-1"> Sunday + [date]</li>
-        <li>[Temp. °C]</li>
-                </div>
-                </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <li class="card-title"> Monday <small> [date] </small></li>
-                            <li>[Temp. °C]</li>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <li class="card-title">Tuesday<small> [date] </small></li>
-                            <li>[Temp. °C]</li>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <li class="card-title">Wednesday<small> [date] </small></li>
-                            <li>[Temp. °C]</li>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <li class="card-title">Thursday<small> [date] </small></li>
-                            <li>[Temp. °C]</li>
-                        </div>
-                    </div>
-                </div>
-        <br />
-        <footer>
-          <a href="https://github.com/flyingoldfysh/my-weather-app" target="_blank"> Opensource Code </a> by <a href= "https://www.linkedin.com/in/winnie-phung-50318483/" target="_blank"> Winnie </a>
-        </footer>
+</div>
+</div>
+</div>
+        </div>
+        </div>
+        </div>
+        <small> <a href="https://github.com/flyingoldfysh/my-weather-app" target="_blank"> Opensource Code </a> by <a href= "https://www.linkedin.com/in/winnie-phung-50318483/" target="_blank"> Winnie </a></small>
     </div>
-    <script src="src/index.js"></script>
+        <script src="src/index.js"></script>
 </body>
-
 </html>
