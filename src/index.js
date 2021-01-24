@@ -1,4 +1,4 @@
-function formatDate(date) {
+function formatDate(now) {
   let hours = now.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -7,8 +7,15 @@ function formatDate(date) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+let year = now.getFullYear();
+let date = now.getDate();
+let monthIndex = now.getMonth();
+let months = [
+  "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", 
+];
+let month =months[monthIndex];
 
-  let dayIndex = date.getDay();
+  let dayIndex = now.getDay();
   let days = [
     "Sunday",
     "Monday",
@@ -20,7 +27,7 @@ function formatDate(date) {
   ];
   let day = days[dayIndex];
 
-  return `${day} ${hours}:${minutes}`;
+  return `${day}, ${date}. ${month}., ${year} | ${hours}:${minutes}`;
 }
 let now = new Date();
 let weekday = document.querySelector("#weekday");
@@ -44,6 +51,7 @@ function searchCity(city) {
   let apiKey = "2a322e4fe40fcdfe735e1b428a60315f";
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiURL).then(displayTemperature);
+
 }
 
 function displayTemperature(response) {
@@ -61,15 +69,9 @@ document.querySelector("#city").innerHTML = response.data.name;
     let iconElement = document.querySelector("#icon");
     iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 iconElement.setAttribute("alt", response.data.weather[0].description)
-  
-//forecast
-function displayForecast(response){
-  console.log(response.data);
 }
 
-apiUrl=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
- axios.get(apiURL).then(displayForecast);
-}
+
 
 searchCity("Canggu");
 
