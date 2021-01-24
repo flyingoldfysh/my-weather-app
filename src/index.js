@@ -61,7 +61,15 @@ document.querySelector("#city").innerHTML = response.data.name;
     let iconElement = document.querySelector("#icon");
     iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 iconElement.setAttribute("alt", response.data.weather[0].description)
-  }
+  
+//forecast
+function displayForecast(response){
+  console.log(response.data);
+}
+
+apiUrl=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+ axios.get(apiURL).then(displayForecast);
+}
 
 searchCity("Canggu");
 
