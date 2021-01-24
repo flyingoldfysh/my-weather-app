@@ -7,13 +7,6 @@ function formatDate(now) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-let year = now.getFullYear();
-let date = now.getDate();
-let monthIndex = now.getMonth();
-let months = [
-  "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", 
-];
-let month =months[monthIndex];
 
   let dayIndex = now.getDay();
   let days = [
@@ -27,7 +20,7 @@ let month =months[monthIndex];
   ];
   let day = days[dayIndex];
 
-  return `${day}, ${date}. ${month}., ${year} | ${hours}:${minutes}`;
+  return `${day}, ${hours}:${minutes}`;
 }
 let now = new Date();
 let weekday = document.querySelector("#weekday");
@@ -94,8 +87,6 @@ function searchCity(city) {
   axios.get(apiURL).then(displayForecast);
 }
 
-
-
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-bar");
@@ -108,6 +99,35 @@ function search(event) {
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
+
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temperature");
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#current-temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+
 
 
 searchCity("Canggu");
