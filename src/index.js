@@ -33,6 +33,35 @@ let now = new Date();
 let weekday = document.querySelector("#weekday");
 weekday.innerHTML = formatDate(now);
 
+
+
+
+//clean up
+function displayTemperature(response) {
+  let cityElement = document.querySelector("#city");
+  let temperatureElement =  document.querySelector("#current-temperature");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");  
+
+  celsiusTemperature = response.data.main.temp;
+
+  temperatureElement.innerHTML=Math.round(celsiusTemperature);
+  cityElement.innerHTML=response.data.name;
+  descriptionElement.innerHTML=response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML=Math.round(response.data.wind.speed);
+  iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+iconElement.setAttribute("alt", response.data.weather[0].description)
+}
+
+
+function searchCity(city) {
+  let apiKey = "2a322e4fe40fcdfe735e1b428a60315f";
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiURL).then(displayTemperature);
+}
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-bar");
@@ -45,32 +74,6 @@ function search(event) {
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
-
-// HW5
-function searchCity(city) {
-  let apiKey = "2a322e4fe40fcdfe735e1b428a60315f";
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiURL).then(displayTemperature);
-
-}
-
-function displayTemperature(response) {
-document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#current-temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
-
-    let iconElement = document.querySelector("#icon");
-    iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-iconElement.setAttribute("alt", response.data.weather[0].description)
-}
-
 
 
 searchCity("Canggu");
