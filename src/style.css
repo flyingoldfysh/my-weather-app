@@ -15,25 +15,9 @@ body{
     list-style-type: none;   
  }
 
-h3{
- font-size: 16px;
- color: rgb(65, 80, 80);
-}
-.weather-forecast-temperature{
- color:rgb(65, 80, 80); 
- font-size: 14px;
-}
-.col-2{
-  text-align: center;
-  margin-top: 20px;
-}
- #current-temperature{
-   color:rgb(33, 33, 33);
-    font-size: 55px;
-    font-weight: 400;
-    line-height: 1;
+ li:first-letter{
+   text-transform: capitalize;
  }
-
 .overview{
   margin: 20px 10px;
   padding: 30px 20px 30px;
