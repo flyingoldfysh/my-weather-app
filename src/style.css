@@ -44,14 +44,14 @@ small{
 
   .header{
   background-image: linear-gradient(to top, #97d9e1  0%, #d9afd9 100%);
-  opacity: 0.8;
+  opacity: 0.9;
   padding: 30px 20px 30px;
   color:rgb(65, 80, 80);
   }
 
 .forecastSection{
   padding-top: 10px;
-  color: rgb(168, 168, 168);
+  color: rgb(201, 201, 201);
   margin: 5px, 25px, 20px, 0px; 
 }
 #current-temperature{
