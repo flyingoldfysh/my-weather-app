@@ -15,9 +15,10 @@
     <div class="container">
 <div class="wrapper">
 <div class="overview">
+    <div class="header">
         <div class="search">
             <form id="search-form">
-                <input type="text" id="search-bar" placeholder="Type to search..." autofocus />
+                <input type="text" id="search-bar" placeholder="Type to search..." />
                 <input class="btn btn-primary" type="submit" id="search-button" value="Enter" />
                 <button type="button" class="btn btn-success" id="current-button"> Current </button>
             </form>
@@ -41,14 +42,17 @@
      <li> Wind: <span id="wind"> </span> km/h </li></span>
      </ul>
     </div>
+    </div>
         </div>
         </div>
-        <hr> <p> Forecast: </p>
+        <div class="forecastSection"> 
+        <p> Forecast: </p>
 <div class= "row weather-forecast" id="forecast">
 </div>
 <footer>
 Last Updated: <span id="date"></span>
 </footer>
+</div>
 </div>
         <small> <a href="https://github.com/flyingoldfysh/my-weather-app" target="_blank"> Opensource Code </a> by <a href= "https://www.linkedin.com/in/winnie-phung-50318483/" target="_blank"> Winnie </a></small>
 </div>
