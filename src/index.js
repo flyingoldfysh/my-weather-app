@@ -28,7 +28,6 @@ function formatHours(timestamp) {
   return `${hours}:${minutes}`;
 }
 
-
 function displayTemperature(response) {
   let cityElement = document.querySelector("#city");
   let temperatureElement =  document.querySelector("#current-temperature");
@@ -40,14 +39,17 @@ function displayTemperature(response) {
 
   celsiusTemperature = response.data.main.temp;
 
-  temperatureElement.innerHTML=Math.round(celsiusTemperature);
+  temperatureElement.innerHTML= Math.round(celsiusTemperature);
   cityElement.innerHTML=response.data.name;
   descriptionElement.innerHTML=response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML=Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  iconElement.setAttribute("alt", response.data.weather[0].description)
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function displayForecast(response) {
@@ -63,16 +65,20 @@ function displayForecast(response) {
         ${formatHours(forecast.dt * 1000)}
       </h3>
       <img
-        src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+        src="http://openweathermap.org/img/wn/${
+          forecast.weather[0].icon
+        }@2x.png"
         alt=""
       />
       <div class="weather-forecast-temperature">
-          <strong>${Math.round(forecast.main.temp_max)}° </strong> ${Math.round(forecast.main.temp_min)}°
+          <strong>
+            ${Math.round(forecast.main.temp_max)}° 
+          </strong> 
+          ${Math.round(forecast.main.temp_min)}°
         </div>
       </div>
         `;
   }
- 
 }
 
 function searchCity(city) {
@@ -140,6 +146,9 @@ function showPosition(position) {
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
 
   axios.get(apiURL).then(displayTemperature);
+
+  apiURl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiURl).then(displayForecast);
 }
 
 function getLocation(event) {
