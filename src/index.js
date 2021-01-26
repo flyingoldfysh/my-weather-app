@@ -131,12 +131,8 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 
-
 searchCity("Canggu");
 
-
-
-//Bonus
 
 function showPosition(position) {
   let latitude = position.coords.latitude;
@@ -159,21 +155,3 @@ function getLocation(event) {
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", getLocation);
 
-// function displayFahrenheit(event) {
-// event.preventDefault();
-// let convertFahrenheit = document.querySelector("#current-temperature");
-// let tempFahrenheit = "37";
-// convertFahrenheit.innerHTML = tempFahrenheit;
-// }
-// let fahrenheit = document.querySelector("#fahrenheit");
-// fahrenheit.addEventListener("click", displayFahrenheit);
-
-// function displayCelcius(event) {
-// event.preventDefault();
-// let convertCelsius = document.querySelector("#current-temperature");
-// let tempCelsius = "3";
-// convertCelsius.innerHTML = tempCelsius;
-// }
-
-// let celsius = document.querySelector("#celsius");
-// celsius.addEventListener("click", displayCelcius);
